@@ -184,7 +184,7 @@ const Navbar = () => {
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="https://my.monime.io" className="text-sm/6 font-semibold text-gray-900">
             Get Started <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>

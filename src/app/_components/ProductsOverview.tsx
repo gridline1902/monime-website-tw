@@ -4,77 +4,89 @@ import MonimeWoman from '@/images/Monime-Website-1.jpg';
 const ProductsOverview = () => {
     return (
         <section className="flex justify-center items-center py-20 bg-gray-50">
-            <div className="container max-w-6xl">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div className="flex flex-col justify-between text-center p-8 bg-white rounded-lg shadow-md h-full">
-                        <div className="flex-grow">
-                            <div className="relative w-full h-48 mb-6">
-                                <Image src="/Payins.jpg" layout="fill" objectFit="cover" alt="monime-payins" className="rounded-md" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-[#0e90f5]">Payins</h3>
-                            <p className="text-2xl font-bold mt-4">Accept local payments and boost sales</p>
-                            <p className="text-gray-600 mt-3">
-                                Allow your customers to pay wherever and however they prefer. Handle acceptance, processing, and settlement with ease.
+            <div className="container mx-auto max-w-6xl">
+                <div className="flex flex-col gap-16">
+                    <div className="flex flex-col lg:flex-row items-center gap-8">
+                        <div className="relative w-full max-w-lg lg:max-w-2xl aspect-w-16 aspect-h-9">
+                            <Image
+                                src={MonimeWoman}
+                                alt="monime-website"
+                                // layout="fill"
+                                // objectFit="cover"
+                                className="rounded-lg shadow-lg aspect-square"
+                            />
+                        </div>
+                        <div className="flex flex-col gap-4 lg:w-1/2">
+                            <h2 className="text-lg font-semibold text-[#0e90f5]">Payins</h2>
+                            <h3 className="text-3xl font-bold text-gray-900">
+                                Accept local payment methods and <br /> boost sales
+                            </h3>
+                            <p className="text-gray-600">
+                                Let your customers pay wherever and however they prefer. Work with one provider to{" "}
+                                <span className="underline">accept</span>, <span className="underline">process</span>, and{" "}
+                                <span className="underline">settle payments</span>.
                             </p>
-                            <div className="mt-5">
-                                <p className="text-[#0e90f5] font-medium">Online Payments</p>
-                                <p className="text-gray-600 text-sm">Accept payments on your website and in-app.</p>
-                                <p className="text-[#0e90f5] font-medium mt-2">In-person Payments</p>
-                                <p className="text-gray-600 text-sm">Enhance your point of sale setup with multiple payment options.</p>
+                            <p className="text-gray-600 mt-4">
+                                <span className="text-[#0e90f5]">Online payments</span><br />
+                                Accept payments on your website and in-app.
+                            </p>
+                            <p className="text-gray-600">
+                                <span className="text-[#0e90f5]">In-person payments ›</span><br />
+                                Enhance your point of sale setup with multiple payment options.
+                            </p>
+                            <div className="mt-auto">
+                                <a
+                                    href="/payins"
+                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
+                                >
+                                    Interested in Payins
+                                </a>
                             </div>
                         </div>
-                        <a href="/payins" className="mt-8 px-6 py-2 text-[#0e90f5] border border-[#0e90f5] rounded-lg hover:bg-[#0e90f5] hover:text-white">
-                            Interested in Payins
-                        </a>
                     </div>
 
-                    <div className="flex flex-col justify-between text-center p-8 bg-white rounded-lg shadow-md h-full">
-                        <div className="flex-grow">
-                            <div className="relative w-full h-48 mb-6">
-                                <Image src="/Payouts.jpg" layout="fill" objectFit="cover" alt="monime-payouts" className="rounded-md" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-[#0e90f5]">Payouts</h3>
-                            <p className="text-2xl font-bold mt-4">Pay staff, customers, and partners</p>
-                            <p className="text-gray-600 mt-3">
-                                Use domestic payment options with a single API call, easily integrating payouts into your portal.
-                            </p>
-                            <div className="mt-5">
-                                <p className="text-[#0e90f5] font-medium">Pay to Wallets</p>
-                                <p className="text-gray-600 text-sm">Enable payments to mobile wallets.</p>
-                                <p className="text-[#0e90f5] font-medium mt-2">Pay to Banks</p>
-                                <p className="text-gray-600 text-sm">Offer transparent bank transfers.</p>
-                            </div>
-                        </div>
-                        <a href="/payouts" className="mt-8 px-6 py-2 text-[#0e90f5] border border-[#0e90f5] rounded-lg hover:bg-[#0e90f5] hover:text-white">
-                            Interested in Payouts
-                        </a>
-                    </div>
+                    <hr className="border-gray-200" />
 
-                    <div className="flex flex-col justify-between text-center p-8 bg-white rounded-lg shadow-md h-full">
-                        <div className="flex-grow">
-                            <div className="relative w-full h-48 mb-6">
-                                <Image src="/Payments.jpg" layout="fill" objectFit="cover" alt="monime-payments" className="rounded-md" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-[#0e90f5]">Payment Links</h3>
-                            <p className="text-2xl font-bold mt-4">Pay staff, customers, and partners</p>
-                            <p className="text-gray-600 mt-3">
-                                Use domestic payment options with a single API call, easily integrating payouts into your portal.
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
+                        <div className="relative w-full max-w-lg lg:max-w-2xl aspect-w-16 aspect-h-9">
+                            <Image
+                                src="/Payouts.jpg"
+                                alt="monime-website"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-lg shadow-lg"
+                            />
+                        </div>
+                        <div className="flex flex-col gap-4 lg:w-1/2">
+                            <h2 className="text-lg font-semibold text-[#0e90f5]">Payouts</h2>
+                            <h3 className="text-3xl font-bold text-gray-900">
+                                Pay your staff, customers, and partners <br /> in the method of their choice.
+                            </h3>
+                            <p className="text-gray-600">
+                                Access domestic payment rails and initiate payments with a single API call – easy to integrate into your user-facing portal.
                             </p>
-                            <div className="mt-5">
-                                <p className="text-[#0e90f5] font-medium">Unified Checkout</p>
-                                <p className="text-gray-600 text-sm">Offer a single checkout process for all payment types.</p>
-                                <p className="text-[#0e90f5] font-medium mt-2">Customizable</p>
-                                <p className="text-gray-600 text-sm">Easily customize the payment flow to match your brand.</p>
+                            <p className="text-gray-600 mt-4">
+                                <span className="text-[#0e90f5]">Pay to wallets ›</span><br />
+                                Enable payments to mobile wallets.
+                            </p>
+                            <p className="text-gray-600">
+                                <span className="text-[#0e90f5]">Pay to banks ›</span><br />
+                                Offer transparent bank transfers.
+                            </p>
+                            <div className="mt-auto">
+                                <a
+                                    href="/payouts"
+                                      className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
+                                >
+                                    Interested in Payouts
+                                </a>
                             </div>
                         </div>
-                        <a href="/payments" className="mt-8 px-6 py-2 text-[#0e90f5] border border-[#0e90f5] rounded-lg hover:bg-[#0e90f5] hover:text-white">
-                            Interested in Payments
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
     );
-};
+}
 
 export default ProductsOverview;
