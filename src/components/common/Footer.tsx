@@ -59,15 +59,16 @@ const navigation = {
             ),
         },
         {
-            name: 'YouTube',
+            name: 'Linkedin',
             href: '#',
             icon: () => (
-                <svg fill="currentColor" viewBox="0 0 24 24" className="size-6">
-                    <path
-                        fillRule="evenodd"
-                        d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-                        clipRule="evenodd"
-                    />
+                <svg
+                    fill="currentColor"
+                    className="size-6"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1">
+                    <path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z" />
                 </svg>
             ),
         },
@@ -78,24 +79,24 @@ const navigation = {
 
 const Footer = () => {
     return (
-        <footer className="bg-white">
+        <footer className="bg-[#0b1e3e]">
             <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
                 <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
                     {navigation.main.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-gray-600 hover:text-gray-900">
+                        <Link key={item.name} href={item.href} className="text-gray-400 hover:text-white">
                             {item.name}
                         </Link>
                     ))}
                 </nav>
                 <div className="mt-16 flex justify-center gap-x-10">
                     {navigation.social.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800">
+                        <Link key={item.name} href={item.href} className="text-gray-400 hover:text-white">
                             <span className="sr-only">{item.name}</span>
                             <item.icon aria-hidden="true" />
                         </Link>
                     ))}
                 </div>
-                <p className="mt-10 text-center text-sm/6 text-gray-600">&copy; 2024 Monime Limited, Inc. All rights reserved.</p>
+                <p className="mt-10 text-center text-sm/6 text-gray-300">&copy; 2024 Monime Limited, Inc. All rights reserved.</p>
             </div>
         </footer>
     )

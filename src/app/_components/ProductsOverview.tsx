@@ -1,21 +1,18 @@
 import Image from "next/image";
 import MonimeWoman from '@/images/Monime-Website-1.jpg';
+import Link from "next/link";
 
 const ProductsOverview = () => {
     return (
-        <section className="flex justify-center items-center py-20 bg-gray-50">
-            <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-gray-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl lg:max-w-7xl">
                 <div className="flex flex-col gap-16">
-                    <div className="flex flex-col lg:flex-row items-center gap-8">
-                        <div className="relative w-full max-w-lg lg:max-w-2xl aspect-w-16 aspect-h-9">
-                            <Image
-                                src={MonimeWoman}
-                                alt="monime-website"
-                                // layout="fill"
-                                // objectFit="cover"
-                                className="rounded-lg shadow-lg aspect-square"
-                            />
-                        </div>
+                    <div className="relative flex flex-col gap-28 mx-auto items-center justify-center lg:flex-row">
+                        <Image
+                            src={MonimeWoman}
+                            alt="monime-website"
+                            className="shadow-lg"
+                        />
                         <div className="flex flex-col gap-4 lg:w-1/2">
                             <h2 className="text-lg font-semibold text-[#0e90f5]">Payins</h2>
                             <h3 className="text-3xl font-bold text-gray-900">
@@ -35,28 +32,16 @@ const ProductsOverview = () => {
                                 Enhance your point of sale setup with multiple payment options.
                             </p>
                             <div className="mt-auto">
-                                <a
+                                <Link
                                     href="/payins"
                                     className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
                                 >
                                     Interested in Payins
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
-
-                    <hr className="border-gray-200" />
-
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
-                        <div className="relative w-full max-w-lg lg:max-w-2xl aspect-w-16 aspect-h-9">
-                            <Image
-                                src="/Payouts.jpg"
-                                alt="monime-website"
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-lg shadow-lg"
-                            />
-                        </div>
+                    <div className="relative flex flex-col gap-28 mx-auto items-center justify-center lg:flex-row">
                         <div className="flex flex-col gap-4 lg:w-1/2">
                             <h2 className="text-lg font-semibold text-[#0e90f5]">Payouts</h2>
                             <h3 className="text-3xl font-bold text-gray-900">
@@ -74,18 +59,23 @@ const ProductsOverview = () => {
                                 Offer transparent bank transfers.
                             </p>
                             <div className="mt-auto">
-                                <a
+                                <Link
                                     href="/payouts"
-                                      className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
+                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
                                 >
                                     Interested in Payouts
-                                </a>
+                                </Link>
                             </div>
                         </div>
+                        <Image
+                            src={MonimeWoman}
+                            alt="monime-website"
+                            className="shadow-lg"
+                        />
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 

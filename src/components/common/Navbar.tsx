@@ -81,13 +81,14 @@ const Navbar = () => {
     <header className="bg-white z-[9999px]">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Monime</span>
             <Image
               alt="Monime Logo"
               src={MonimeLogo}
               width={100}
               height={100}
+              className='scale-150'
             />
           </Link>
         </div>
@@ -103,7 +104,7 @@ const Navbar = () => {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 focus:outline-none">
               Products
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -151,33 +152,39 @@ const Navbar = () => {
           </Link>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-              Company
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {companyLinks.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
-                  >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-5 flex-none text-[#0e90f5]" />
-                    </div>
-                    <div className="flex-auto">
-                      <div className="block font-semibold text-gray-900">
-                        {item.name}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </PopoverPanel>
+            {({ open }) => (
+              <>
+                <PopoverButton
+                  className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 focus:outline-none"
+                >
+                  Company
+                  <ChevronDownIcon aria-hidden="true" className={"size-5 flex-none text-gray-400"} />
+                </PopoverButton>
+                <PopoverPanel
+                  transition
+                  className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="p-4">
+                    {companyLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon aria-hidden="true" className="size-5 flex-none text-[#0e90f5]" />
+                        </div>
+                        <div className="flex-auto">
+                          <div className="block font-semibold text-gray-900">
+                            {item.name}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </>
+            )}
           </Popover>
           <Link key="Developers" href="#" className="text-sm/6 font-semibold text-gray-900">
             Developers
@@ -199,8 +206,9 @@ const Navbar = () => {
               <Image
                 alt="Monime Logo"
                 src={MonimeLogo}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
+                className='scale-150'
               />
             </Link>
             <button

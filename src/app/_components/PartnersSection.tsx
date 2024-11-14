@@ -34,8 +34,7 @@ export default function TrustedPartners() {
                                 src={image.src}
                                 alt={image.alt}
                                 fill
-                                className={`${image.index === 4 ? 'object-scale-down' : 'object-cover'
-                                    }`}
+                                className={`${image.index === 4 ? 'object-scale-down' : 'object-contain'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`}
                             />
                         </div>
                     ))}
