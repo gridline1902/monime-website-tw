@@ -8,6 +8,7 @@ import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel, Pop
 import { Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import MonimeLogo from '@/images/monime.png';
+import clsx from 'clsx'
 
 const PayinIcon = () => (
   <svg
@@ -49,8 +50,8 @@ const PayoutIcon = () => (
 )
 
 const companyLinks = [
-  { name: 'Our Story', href: '#', icon: UserIcon },
-  { name: 'Contact Us', href: '#', icon: PhoneIcon },
+  { name: 'Our Story', href: '/our-story', icon: UserIcon },
+  { name: 'Contact Us', href: '/contact', icon: PhoneIcon },
 ]
 
 
@@ -66,12 +67,7 @@ const callsToAction = [
     href: '#',
     icon: LinkIcon
   },
-  { name: 'Contact Us', href: '#', icon: PhoneIcon },
-]
-
-const navigation = [
-  { name: 'Pricing', href: '#' },
-  { name: 'Developers', href: '#' },
+  { name: 'Contact Us', href: '/contact', icon: PhoneIcon },
 ]
 
 const Navbar = () => {
@@ -88,6 +84,7 @@ const Navbar = () => {
               src={MonimeLogo}
               width={100}
               height={100}
+              // quality={100}
               className='scale-150'
             />
           </Link>
@@ -104,50 +101,53 @@ const Navbar = () => {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 focus:outline-none">
-              Products
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
-                  >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" />
-                    </div>
-                    <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
-                    </div>
+            {({ open }) => (
+              <>
+                <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 focus:outline-none">
+                  Products
+                  <ChevronDownIcon aria-hidden="true" className={clsx('size-5', 'text-gray-400', open ? 'rotate-180' : 'rotate-0')} />
+                </PopoverButton>
+                <PopoverPanel
+                  transition
+                  className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="p-4">
+                    {products.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon aria-hidden="true" />
+                        </div>
+                        <div className="flex-auto">
+                          <a href={item.href} className="block font-semibold text-gray-900">
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                          {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="size-5 flex-none text-[#0e90f5]" />
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </PopoverPanel>
+                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                    {callsToAction.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+                      >
+                        <item.icon aria-hidden="true" className="size-5 flex-none text-[#0e90f5]" />
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </>
+            )}
           </Popover>
 
-          <Link key="Pricing" href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link key="Pricing" href="/pricing" className="text-sm/6 font-semibold text-gray-900">
             Pricing
           </Link>
 
@@ -158,7 +158,7 @@ const Navbar = () => {
                   className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 focus:outline-none"
                 >
                   Company
-                  <ChevronDownIcon aria-hidden="true" className={"size-5 flex-none text-gray-400"} />
+                  <ChevronDownIcon aria-hidden="true" className={clsx('size-5', 'text-gray-400', open ? 'rotate-180' : 'rotate-0')} />
                 </PopoverButton>
                 <PopoverPanel
                   transition
@@ -186,7 +186,7 @@ const Navbar = () => {
               </>
             )}
           </Popover>
-          <Link key="Developers" href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link key="Developers" href="https://docs.monime.io" className="text-sm/6 font-semibold text-gray-900">
             Developers
           </Link>
         </PopoverGroup>
@@ -242,7 +242,7 @@ const Navbar = () => {
                   </DisclosurePanel>
                 </Disclosure>
                 <Link
-                  href="#"
+                  href="/pricing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Pricing
@@ -254,7 +254,7 @@ const Navbar = () => {
                   Company
                 </Link>
                 <Link
-                  href="#"
+                  href="https://docs.monime.io"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Developers
@@ -262,7 +262,7 @@ const Navbar = () => {
               </div>
               <div className="py-6">
                 <Link
-                  href="#"
+                  href="https://my.monime.io"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Get Started

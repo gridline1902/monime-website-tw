@@ -34,7 +34,7 @@ const ProductsOverview = () => {
                             <div className="mt-auto">
                                 <Link
                                     href="/payins"
-                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
+                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
                                 >
                                     Interested in Payins
                                 </Link>
@@ -61,7 +61,7 @@ const ProductsOverview = () => {
                             <div className="mt-auto">
                                 <Link
                                     href="/payouts"
-                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg text-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
+                                    className="inline-block px-6 py-3 border border-[#0e90f5] text-[#0e90f5] rounded-lg font-semibold hover:bg-[#0e90f5] hover:text-white transition-colors duration-200"
                                 >
                                     Interested in Payouts
                                 </Link>

@@ -21,7 +21,7 @@ export default function TrustedPartners() {
     return (
         <div className="mt-16 max-w-6xl mx-auto space-y-8">
             <div className="text-center">
-                <p className="text-md font-medium">Trusted by these partners</p>
+                <p className="font-medium">Trusted by these partners</p>
             </div>
             <div className="max-w-5xl mx-auto">
                 <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-20">

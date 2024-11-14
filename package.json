@@ -15,6 +15,7 @@
     "@headlessui/react": "^2.2.0",
     "@headlessui/tailwindcss": "^0.2.1",
     "@heroicons/react": "^2.1.5",
+    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "next": "14.1.0",
     "react": "^18",
