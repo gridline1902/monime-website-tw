@@ -18,29 +18,49 @@ const imagePaths = [
 
 export default function TrustedPartners() {
     return (
-        <div className="max-w-6xl mx-auto space-y-8">
-            <div className="text-center">
-                <p className="font-medium">Trusted by these partners</p>
-            </div>
-            <div className="max-w-5xl mx-auto">
-                <div className="grid grid-cols-2 md:flex md:flex-row md:gap-20 items-center gap-8">
-                    {imagePaths.map((image) => (
-                        <div
-                            key={image.index}
-                            className={clsx(`${image.index === 4 && "relative scale-150"} relative w-[200px] h-[90px] overflow-hidden`)}
-                        >
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                className={clsx(
-                                    `${image.index === 4 ? 'object-contain scale-50' : 'object-contain'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`
-                                )}
-                            />
-                        </div>
-                    ))}
+        <div className="bg-white">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="text-center">
+                    <h2 className="font-medium">Trusted by these partners</h2>
+                </div>
+                <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    <Image
+                        alt="Orange-Money"
+                        src={OrangeImg}
+                        width={158}
+                        height={48}
+                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                    />
+                    <Image
+                        alt="Afrimoney"
+                        src={AfrimoneyImg}
+                        width={158}
+                        height={48}
+                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                    />
+                    <Image
+                        alt="Ecobank"
+                        src={EcobankImg}
+                        width={158}
+                        height={48}
+                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                    />
+                    <Image
+                        alt="GT-Bank"
+                        src={GTBankImg}
+                        width={158}
+                        height={48}
+                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                    />
+                    <Image
+                        alt="Q-Money"
+                        src={QMoneyImg}
+                        width={158}
+                        height={48}
+                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 col-start-2 max-h-12 w-full object-contain scale-50 sm:col-start-auto lg:col-span-1"
+                    />
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
