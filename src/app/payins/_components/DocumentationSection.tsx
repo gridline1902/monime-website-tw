@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 export default function DocumentationSection() {
     return (
-        <section className="bg-gray-50 py-16">
-            <div className="container mx-auto px-4">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">Built for Developers</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">

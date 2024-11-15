@@ -1,30 +1,18 @@
 'use client'
 
+import Link from "next/link";
+
 const HeroSection = () => {
     return (
-        <div className="bg-white">
-            <div className="relative px-6 pt-14 lg:px-8">
-                {/* <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 z-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0e90f5] to-[#ffffff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-
-                    />
-                </div> */}
-                <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-10">
+        <section className="bg-white">
+            <div className="relative px-2 py-20 lg:py-28">
+                <div className="mx-auto max-w-4xl">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Announcing our next round of funding.{' '}
-                            <a href="#" className="font-semibold text-[#0e90f5]">
-                                <span aria-hidden="true" className="absolute inset-0" />
+                            Checkout Simplified: Read the Full Article Here.{" "}
+                            <Link href="#" className="font-semibold text-[#0e90f5]">
                                 Read more <span aria-hidden="true">&rarr;</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="text-center">
@@ -35,32 +23,20 @@ const HeroSection = () => {
                             Say goodbye to complex payment challenges in Sierra Leone. With our all-in-one payment platform, you can accept and disburse a wide range of local payment methods that millions of consumers prefer.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <a
-                                href="#"
-                                className="rounded-md bg-[#0e90f5] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0e90f5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0e90f5]"
+                            <Link
+                                href="https://my.monime.io"
+                                className="inline-block px-6 py-3 rounded-lg font-semibold bg-[#0e90f5] text-white"
                             >
                                 Get started
-                            </a>
-                            <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                            </Link>
+                            <Link href="/contact" className="text-sm/6 font-semibold text-gray-900">
                                 Contact sales <span aria-hidden="true">→</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
-                {/* <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#0e90f5] to-[#ffffff] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    />
-                </div> */}
             </div>
-        </div>
+        </section >
     )
 }
 

@@ -6,6 +6,7 @@ import AfrimoneyImg from '@/images/Afrimoney-3.png';
 import EcobankImg from '@/images/Ecobank-2.png';
 import GTBankImg from '@/images/GTBank-2.png';
 import QMoneyImg from '@/images/QMoney-2.png';
+import clsx from "clsx";
 
 
 const imagePaths = [
@@ -19,7 +20,7 @@ const imagePaths = [
 
 export default function TrustedPartners() {
     return (
-        <div className="mt-16 max-w-6xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-8">
             <div className="text-center">
                 <p className="font-medium">Trusted by these partners</p>
             </div>
@@ -34,7 +35,7 @@ export default function TrustedPartners() {
                                 src={image.src}
                                 alt={image.alt}
                                 fill
-                                className={`${image.index === 4 ? 'object-scale-down' : 'object-contain'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`}
+                                className={clsx(`${image.index === 4 ? 'object-fill scale-50' : 'object-contain'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`)}
                             />
                         </div>
                     ))}

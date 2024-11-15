@@ -18,7 +18,7 @@ const MeetOurTeamSection = () => {
                             <ArrowRightIcon className="ml-2 h-5 w-5" />
                         </button>
                     </div>
-                    <div className="md:w-full">
+                    <div className="flex place-content-end md:w-full">
                         <Image
                             src={OurTeam}
                             alt="Our team"

@@ -38,8 +38,8 @@ const features = [
 
 const PayoutsSolution = () => {
     return (
-        <div className="bg-white py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="bg-white pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                         Faster payouts, instant benefits
@@ -66,7 +66,7 @@ const PayoutsSolution = () => {
                     </dl>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

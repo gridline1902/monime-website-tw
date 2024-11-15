@@ -50,8 +50,7 @@ const PayoutIcon = () => (
 )
 
 const companyLinks = [
-  { name: 'Our Story', href: '/our-story', icon: UserIcon },
-  { name: 'Contact Us', href: '/contact', icon: PhoneIcon },
+  { name: 'Our Story', href: '/our-story', icon: UserIcon }
 ]
 
 
@@ -191,7 +190,10 @@ const Navbar = () => {
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="https://my.monime.io" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            href="https://my.monime.io"
+            className="inline-block px-6 py-3 rounded-lg font-semibold bg-[#0e90f5] text-white"
+          >
             Get Started <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -225,7 +227,7 @@ const Navbar = () => {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Product
+                    Products
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
@@ -247,12 +249,24 @@ const Navbar = () => {
                 >
                   Pricing
                 </Link>
-                <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </Link>
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                   Company
+                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-[open]:rotate-180" />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...companyLinks].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
                 <Link
                   href="https://docs.monime.io"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
@@ -263,7 +277,7 @@ const Navbar = () => {
               <div className="py-6">
                 <Link
                   href="https://my.monime.io"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="inline-block px-6 py-3 rounded-lg font-semibold bg-[#0e90f5] text-white"
                 >
                   Get Started
                 </Link>
