@@ -23,7 +23,7 @@ export default function TrustedPartners() {
                 <p className="font-medium">Trusted by these partners</p>
             </div>
             <div className="max-w-5xl mx-auto">
-                <div className="grid grid-cols-2 mx-auto place-items-center md:flex md:flex-row md:gap-20 items-center gap-8">
+                <div className="grid grid-cols-2 md:flex md:flex-row md:gap-20 items-center gap-8">
                     {imagePaths.map((image) => (
                         <div
                             key={image.index}
@@ -34,7 +34,7 @@ export default function TrustedPartners() {
                                 alt={image.alt}
                                 fill
                                 className={clsx(
-                                    `${image.index === 4 ? 'object-contain scale-50 bg-red-500 w-full' : 'object-cover'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`
+                                    `${image.index === 4 ? 'object-contain scale-50' : 'object-contain'} hover:transform hover:transition-transform hover:ease-in-out hover:-translate-y-4 hover:duration-300`
                                 )}
                             />
                         </div>
