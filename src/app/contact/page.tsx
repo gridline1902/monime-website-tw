@@ -1,9 +1,12 @@
+import ContactHero from "./_components/ContactHeroSection";
+import ContactsSolution from "./_components/ContactsSolution";
 
 
 export default function Contact() {
     return (
-        <div>
-            dhdsj
-        </div>
+        <main>
+            <ContactHero />
+            <ContactsSolution />
+        </main>
     )
 }
