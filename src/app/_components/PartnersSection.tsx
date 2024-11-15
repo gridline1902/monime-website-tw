@@ -29,35 +29,35 @@ export default function TrustedPartners() {
                         src={OrangeImg}
                         width={158}
                         height={48}
-                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        className="scale-150 transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                     />
                     <Image
                         alt="Afrimoney"
                         src={AfrimoneyImg}
                         width={158}
                         height={48}
-                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        className="scale-150 transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                     />
                     <Image
                         alt="Ecobank"
                         src={EcobankImg}
                         width={158}
                         height={48}
-                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        className="scale-150 transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                     />
                     <Image
                         alt="GT-Bank"
                         src={GTBankImg}
                         width={158}
                         height={48}
-                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                        className="scale-150 transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
                     />
                     <Image
                         alt="Q-Money"
                         src={QMoneyImg}
                         width={158}
                         height={48}
-                        className="transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 col-start-2 max-h-12 w-full object-contain scale-50 sm:col-start-auto lg:col-span-1"
+                        className="scale-75 transition-transform hover:transform hover:ease-in-out hover:-translate-y-4 hover:duration-300 col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                     />
                 </div>
             </div>
