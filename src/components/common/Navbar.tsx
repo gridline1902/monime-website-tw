@@ -243,12 +243,16 @@ const Navbar = () => {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <Link
-                  href="/pricing"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Pricing
-                </Link>
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton
+                    key="pricing"
+                    as="a"
+                    href="/pricing"
+                    className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Pricing
+                  </DisclosureButton>
+                </Disclosure>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                     Company
@@ -267,12 +271,16 @@ const Navbar = () => {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <Link
-                  href="https://docs.monime.io"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Developers
-                </Link>
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton
+                    key="documentation"
+                    as="a"
+                    href="https://docs.monime.io"
+                    className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Developers
+                  </DisclosureButton>
+                </Disclosure>
               </div>
               <div className="py-6">
                 <Link
