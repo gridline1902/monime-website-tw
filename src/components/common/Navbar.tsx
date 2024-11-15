@@ -120,10 +120,10 @@ const Navbar = () => {
                           <item.icon aria-hidden="true" />
                         </div>
                         <div className="flex-auto">
-                          <a href={item.href} className="block font-semibold text-gray-900">
+                          <Link href={item.href} className="block font-semibold text-gray-900">
                             {item.name}
                             <span className="absolute inset-0" />
-                          </a>
+                          </Link>
                           {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
                         </div>
                       </div>
@@ -146,7 +146,7 @@ const Navbar = () => {
             )}
           </Popover>
 
-          <Link key="Pricing" href="/pricing" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/pricing" className="text-sm/6 font-semibold text-gray-900">
             Pricing
           </Link>
 
@@ -203,7 +203,7 @@ const Navbar = () => {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Monime</span>
               <Image
                 alt="Monime Logo"
@@ -251,7 +251,7 @@ const Navbar = () => {
                 </Link>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                   Company
+                    Company
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">

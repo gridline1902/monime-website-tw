@@ -19,7 +19,7 @@ const CustomPricingOptions = () => {
                             please contact us to discuss custom pricing options.
                             Our teams will review your current business statements and work with you to develop a personalized pricing package.
                         </p>
-                        <Link href="#" className="inline-block mt-4 text-black bg-white w-fit px-4 py-3 rounded-lg font-semibold">Contact Sales</Link>
+                        <Link href="/contact" className="inline-block mt-4 text-black bg-white w-fit px-4 py-3 rounded-lg font-semibold">Contact Sales</Link>
                     </div>
                     <div className="flex flex-wrap gap-10 justify-center items-center">
                         <div className="flex justify-center">
